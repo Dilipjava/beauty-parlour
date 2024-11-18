@@ -1,0 +1,191 @@
+
+
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" >Modal title</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		@if(images) {
+            <ngb-carousel  [interval]="1000">
+                <ng-template ngbSlide style="height: 100%;" *ngFor="let image of images;let i = index">
+                    <div class="picsum-img-wrapper" style="height: 20%;">
+                        <img [src]="image" alt="Random first slide" style="height:320px"/>
+                    </div>
+                    <!-- <div class="carousel-caption" >
+                        <h3>{{i}}</h3>
+                        <p>{{i}}</p>
+                    </div> -->
+                </ng-template>
+              
+            </ngb-carousel>
+        }
+		<div>
+			{{itemglobal}}
+			<ul style="line-height: 20px;" >
+                <li *ngFor="let i of itemglobal.specifications">{{i}}</li>
+            </ul>
+		</div>
+		<p>
+			Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+			Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+		
+			Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+			rutrum faucibus dolor auctor.
+		
+			Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+			Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+		
+			Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+			Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+		
+			Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
+			rutrum faucibus dolor auctor.
+			
+		
+		</p>
+		
+	</div>
+	<div class="modal-footer" style="height:60px" >
+		<div style="display: flex;">
+			<p>Praesent commodo cursus magna, vel scelerisque  </p>
+			<!-- <button type="button" class="btn btn-secondary" style="height: 50px;width:50px;background-color: rgb(0, 255, 34);border-radius: 50%;" (click)="modal.close('Close click')"><i class="fa fa-whatsapp fa-2x" style="color: white;"></i></button> -->
+			<!-- <span style="height: 50px;width:50px;background-color: rgb(0, 255, 34);border-radius: 50%;"><i class="fa fa-whatsapp fa-2x" style="color: white;"></i></span> -->
+			<i class="fa fa-whatsapp fa-2x" (click)="modal.close('Close click')" style="color: rgb(0, 255, 34);"></i>
+	    </div>
+	</div>
+</ng-template>
+
+<!-- <div class="card" style="height:200px; width:100%"><h2>Poster</h2></div> -->
+@if (images) {
+    <ngb-carousel  [interval]="3000">
+        <ng-template ngbSlide style="height: 200px;" *ngFor="let image of images;let i = index">
+            <div class="picsum-img-wrapper" style="height: 400px;display: flex;justify-content: center;">
+                <img [src]="image" alt="Random first slide" style="height:80%;background-color: black;"/>
+            </div>
+            <div class="carousel-caption">
+                <!-- <h3>{{i}}</h3>
+                <p>{{i}}</p> -->
+            </div>
+        </ng-template>
+      
+    </ngb-carousel>
+}
+
+
+
+<h4 style="text-align: center;">Our Services</h4>
+<div class="groupicons">
+    <div class="icons">
+        <img style="width:100%;height:80px;border-radius: 50%;" (mouseover)="print()" src="assets/Makeup.jpeg">
+        <h6 style="text-align: center;">Make up</h6>
+    </div>
+    <div class="icons">
+        <img style="width:100%;height:80px;border-radius: 50%;" src="assets/Hair care.jpeg">
+        <h6 style="text-align: center;">hair-color</h6>
+    </div>
+   
+    <div class="icons">
+        <img style="width:100%;height:80px" src="assets/sauna.png">
+        <h6 style="text-align: center;">Sauna</h6>
+    </div>
+    <div class="icons">
+        <img style="width:100%;height:80px;border-radius: 50%;" src="assets/Banner 1.jpeg">
+        <h6 style="text-align: center;">hair style</h6>
+    </div>
+    <div class="icons">
+        <img style="width:100%;height:80px;border-radius: 50%;" src="assets/Nails.jpeg">
+        <h6 style="text-align: center;">Nails</h6>
+    </div>
+    <div class="icons">
+        <img style="width:100%;height:80px;border-radius: 50%;" src="assets/Skin care.jpeg">
+        <h6 style="text-align: center;">Facial</h6>
+    </div>
+    <div class="icons">
+        <img style="width:100%;height:80px;border-radius: 50%;" src="assets/Bridal.jpg">
+        <h6 style="text-align: center;">Bridal</h6>
+    </div>
+    <div class="icons">
+        <img style="width:100%;height:80px;border-radius: 50%;" src="assets/Nails.jpg">
+        <h6 style="text-align: center;">Nails</h6>
+    </div>
+    <div class="icons">
+        <img style="width:100%;height:80px;border-radius: 50%;" src="assets/hair color.jpg">
+        <h6 style="text-align: center;">hair color</h6>
+    </div>
+</div>
+<h4 style="text-align: center;">Pictures</h4>
+<div class="Pictures">
+    <div class="left" style="height:40px;width:40px"  (click)="scrollLeft()">
+        <span class="material-symbols-outlined">
+            arrow_back_ios
+            </span>
+    </div>   
+
+    <div #widgetsContent class="custom-slider-main" style="height:300px">
+        <div class="info-box"  *ngFor="let i of pictures;">
+        <img [src]="i" class="info-box" style="width:250px;height:250px">
+        </div>
+    
+    </div>
+
+    <div class="right" style="height:40px;width:40px"  (click)="scrollRight()">
+        <span class="material-symbols-outlined" style="color: white;">
+            arrow_forward_ios
+            </span>
+    </div>
+
+</div>
+<h4 style="text-align: center;">Store offers</h4>
+<div class="card" style="width:100%; margin:5px 0px" *ngFor="let item of items">
+      <div class="card-body" style="display: flex;">
+        <div style="flex: 1;">
+          <h4 style="font-size: 25px;font-weight: bold;">{{item.name}}</h4>
+          <hr style="width: 90%;">
+            <ul style="line-height: 20px;" >
+                <li *ngFor="let i of item.specifications">{{i}}</li>
+            </ul>
+          <span>contact through <a [href]="item.href" target="_blank" style="color: #25D366;text-decoration: none;">WhatsApp</a></span>
+		  <button class="btn btn-secondary" (click)="open(content,item)">Veiw more details</button>
+        </div>
+        <div style="flex: 1;background-color: blue;">
+            <img style="width:100%;max-width: 290px;height:100%;" [src]="item.imageurl">
+        </div>
+      </div>
+</div>
+<h4 style="text-align: center;">Customer Review</h4>
+<div class="scrolling-wrapper">
+    <div class="card" ><img  src="assets/reviews1.png"></div>
+    <div class="card"><img  src="assets/reviews2.png"></div>
+    <div class="card"><img  src="assets/reviews3.png"></div>
+    <div class="card"><img  src="assets/reviews4.png"></div>
+    <div class="card"><img  src="assets/reviews6.png"></div>
+    <div class="card"><img  src="assets/reviews7.png"></div>
+    <div class="card"><img  src="assets/reviews8.png"></div>
+    <div class="card"><img  src="assets/reviews4.png"></div>
+    <div class="card"><img src="assets/reviews3.png"></div>
+</div>
+<div class="card" style="background-color: rgb(73, 66, 66);margin-bottom: 70px;">
+    <div class="googlemap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3607.6102163193154!2d82.97813889999999!3d25.283694399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDE3JzAxLjMiTiA4MsKwNTgnNDEuMyJF!5e0!3m2!1sen!2sin!4v1727010637791!5m2!1sen!2sin" width="373" height="276" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <table>
+        <tbody>
+       <tr><td ><i class="fa fa-envelope fa-lg" ></i><span  class="hovertext" >emailidgmail.com</span></td></tr>
+       <tr><td><span  class="hovertext" >Time from Mon - Sun
+        10:00 am - 8:00 pm</span></td></tr>
+       <tr><td><span  class="hovertext" >Address
+        Just In Front Of Axis Bank, Sundarpur, Varanasi - 221005 (In Front Of Axis Bank)</span></td></tr>
+       
+        </tbody>
+      </table>
+</div>
+<!--<i class="fa fa-instagram fa-lg"></i><span  class="hovertext" > emailidgmail.com</span><i class="fa fa-whatsapp fa-lg"></i><i class="fa fa-facebook fa-lg"></i>-->
+<!-- <div class="card" style="width:90%;">
+    <div class="card-body">
+       <span style="font-size: 25px;font-weight: bold;">Package one</span>
+       <span>Itemone</span>
+       <span>Itemone</span>tel:07947429722
+       <span>Itemone</span>
+    </div>
+</div> -->

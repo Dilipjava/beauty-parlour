@@ -1,0 +1,107 @@
+.dark-modal .modal-content {
+    background-color: #292b2c;
+    color: rgb(216, 46, 46);
+}
+.dark-modal .close {
+    color: rgb(216, 46, 46);
+}
+
+.light-blue-backdrop {
+    background-color: #5cb3fd;
+}
+.scrolling-wrapper {
+    overflow-x: scroll;
+    scrollbar-width: 20px;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
+    .card {
+      display: inline-block;
+      margin: 10px 10px;
+    }
+  }
+.card{
+    img{
+    height:220px;
+    width:400px;
+    }
+  }
+.groupicons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap :1.5rem;
+    margin: 20px;
+    padding-bottom: 20px;
+}
+.icons{
+    height:85px;
+    width:85px;
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    
+
+}
+.icons:hover{
+    transform: scale(1.5);
+}
+
+.hovertext{
+    color: white;
+}
+.hovertext:hover, .hovertext:focus, .hovertext:active{
+    color: rgb(208, 189, 22);
+}
+span:hover{
+    color: rgb(208, 189, 22);
+}
+
+.googlemap{
+    padding-bottom: 50%;
+    position: relative;
+}
+.googlemap iframe{
+    height: 100%;
+    width: 100%;
+    left:0;
+    top:0;
+    position: absolute;
+}
+.custom-slider-main{
+    display: flex;
+    overflow: hidden;    
+    scroll-behavior: smooth;
+}
+
+ .info-box{
+    width: 100%;
+    height:150px
+ }
+ .custom-icon {
+    color: white;
+    background-color: white;
+    border-radius: 50%; /* Optional: to make the icon background circular */
+    padding: 5px; /* Optional: adds padding around the icon */
+  }
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
+}
+.Pictures{
+    position: relative;
+    .left{
+        position: absolute;
+        left: 10px;
+        top:120px;
+    }
+    .right{
+        position: absolute;
+        right: 10px;
+        top:120px;
+    }
+}
