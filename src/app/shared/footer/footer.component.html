@@ -1,20 +1,20 @@
 <div >
     <footer style="background-color: #32373D;display: flex; justify-content: space-around;">
         <div class="onebelow">
-            <a href="/home" class="btn" ><i class="fa fa-home fa-2x" [style.color]="isActive('/home') ? 'white' : 'black'"></i></a>
-            <span [style.color]="isActive('/home') ? 'white' : 'black'">Home</span>
+            <a href="/" class="btn" ><i class="fa fa-home fa-2x" [style.color]="isActive('/home') ? 'white' : 'black'"></i></a>
+            <span [style.color]="isActive('/beauty_parlour/') ? 'white' : 'black'">Home</span>
         </div>
-        <!-- <div class="onebelow">
-            <a href="/about" class="btn "><i class="fa fa-table fa-2x" [style.color]="isActive('/about') ? 'white' : 'black'"></i></a>
-            <span>Categoryies</span>
-        </div> -->
-        <div class="onebelow">
+        <!--    <div class="onebelow">
             <a href="/" class="btn" ><i class="fa fa-whatsapp fa-2x" [style.color]="isActive('/about') ? 'white' : 'black'"></i></a>
             <span [style.color]="isActive('/about') ? 'white' : 'black'">WhatsApp</span>
+        </div> -->
+        <div class="onebelow">
+            <a href="https://api.whatsapp.com/send?phone=918217860187&text=I%20want%20to%20know%20more%20about%20Your%20Offers" class="btn" ><i class="fa fa-whatsapp fa-2x" style="color:white" ></i></a>
+            <span  style="color:white">WhatsApp</span>
         </div>
         <div class="onebelow">
-            <a href="/"  class="btn" ><i class="fa fa-info fa-2x" [style.color]="isActive('/') ? 'white' : 'black'"></i></a>
-            <span [style.color]="isActive('/') ? 'white' : 'black'" >About</span>
+            <a href="/about"  class="btn" ><i class="fa fa-info fa-2x" [style.color]="isActive('/about') ? 'white' : 'black'"></i></a>
+            <span [style.color]="isActive('/beauty_parlour/about') ? 'white' : 'black'" >About</span>
         </div>
     </footer>
 </div>

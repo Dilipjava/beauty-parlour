@@ -27,22 +27,13 @@
             </ul>
 		</div>
 		<p>
-			Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-			Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-		
-			Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
-			rutrum faucibus dolor auctor.
-		
-			Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-			Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-		
-			Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-			Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-		
-			Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet
-			rutrum faucibus dolor auctor.
-			
-		
+			"Discover the ultimate beauty experience at our premium beauty parlor. We specialize in a range of 
+            beauty services tailored to enhance your natural charm. From professional makeup and hairstyling to
+            rejuvenating facials and advanced skincare treatments, we offer it all under one roof. Pamper 
+            yourself with luxurious nail care, soothing sauna sessions, and bridal makeovers designed to make 
+            your big day unforgettable. Our expert team is dedicated to ensuring you look and feel your best. 
+            Visit us today for personalized beauty solutions crafted just for you!"
+
 		</p>
 		
 	</div>
@@ -78,11 +69,11 @@
 <div class="groupicons">
     <div class="icons">
         <img style="width:100%;height:80px;border-radius: 50%;" (mouseover)="print()" src="assets/Makeup.jpeg">
-        <h6 style="text-align: center;">Make up</h6>
+        <h6 style="text-align: center;">Makeup</h6>
     </div>
     <div class="icons">
         <img style="width:100%;height:80px;border-radius: 50%;" src="assets/Hair care.jpeg">
-        <h6 style="text-align: center;">hair-color</h6>
+        <h6 style="text-align: center;">Hair Carer</h6>
     </div>
    
     <div class="icons">
@@ -95,11 +86,11 @@
     </div>
     <div class="icons">
         <img style="width:100%;height:80px;border-radius: 50%;" src="assets/Nails.jpeg">
-        <h6 style="text-align: center;">Nails</h6>
+        <h6 style="text-align: center;"> Nail Care</h6>
     </div>
     <div class="icons">
         <img style="width:100%;height:80px;border-radius: 50%;" src="assets/Skin care.jpeg">
-        <h6 style="text-align: center;">Facial</h6>
+        <h6 style="text-align: center;">Facials</h6>
     </div>
     <div class="icons">
         <img style="width:100%;height:80px;border-radius: 50%;" src="assets/Bridal.jpg">
@@ -124,7 +115,7 @@
 
     <div #widgetsContent class="custom-slider-main" style="height:300px">
         <div class="info-box"  *ngFor="let i of pictures;">
-        <img [src]="i" class="info-box" style="width:250px;height:250px">
+        <img [src]="i" class="info-box" style="width:250px;height:250px" alt="Interior view of our beauty parlor with premium equipment">
         </div>
     
     </div>
@@ -136,10 +127,11 @@
     </div>
 
 </div>
-<h4 style="text-align: center;">Store offers</h4>
+<h4 style="text-align: center;">Exclusive Store Offers & Deals</h4>
 <div class="card" style="width:100%; margin:5px 0px" *ngFor="let item of items">
       <div class="card-body" style="display: flex;">
         <div style="flex: 1;">
+            <!-- Store Offer Name -->
           <h4 style="font-size: 25px;font-weight: bold;">{{item.name}}</h4>
           <hr style="width: 90%;">
             <ul style="line-height: 20px;" >
@@ -153,17 +145,26 @@
         </div>
       </div>
 </div>
-<h4 style="text-align: center;">Customer Review</h4>
-<div class="scrolling-wrapper">
-    <div class="card" ><img  src="assets/reviews1.png"></div>
-    <div class="card"><img  src="assets/reviews2.png"></div>
-    <div class="card"><img  src="assets/reviews3.png"></div>
-    <div class="card"><img  src="assets/reviews4.png"></div>
-    <div class="card"><img  src="assets/reviews6.png"></div>
-    <div class="card"><img  src="assets/reviews7.png"></div>
-    <div class="card"><img  src="assets/reviews8.png"></div>
-    <div class="card"><img  src="assets/reviews4.png"></div>
-    <div class="card"><img src="assets/reviews3.png"></div>
+<h4 style="text-align: center;">Customer Reviews</h4>
+<div class="scrolling-wrapper" aria-label="Customer Reviews Section">
+    <div class="card" aria-labelledby="review1">
+        <img src="assets/reviews1.png" alt="Customer review 1" id="review1"></div>
+    <div class="card" aria-labelledby="review2">
+        <img src="assets/reviews2.png" alt="Customer review 2" id="review2"></div>
+    <div class="card" aria-labelledby="review3">
+        <img src="assets/reviews3.png" alt="Customer review 3" id="review3"></div>
+    <div class="card" aria-labelledby="review4">
+        <img src="assets/reviews4.png" alt="Customer review 4" id="review4"></div>
+    <div class="card" aria-labelledby="review5">
+        <img src="assets/reviews6.png" alt="Customer review 5" id="review5"></div>
+    <div class="card" aria-labelledby="review6">
+        <img src="assets/reviews7.png" alt="Customer review 6" id="review6"></div>
+    <div class="card" aria-labelledby="review7">
+        <img src="assets/reviews8.png" alt="Customer review 7" id="review7"></div>
+    <div class="card" aria-labelledby="review8">
+        <img src="assets/reviews4.png" alt="Customer review 8" id="review8"></div>
+    <div class="card" aria-labelledby="review9">
+     <img src="assets/reviews3.png" alt="Customer review 9" id="review9"></div>
 </div>
 <div class="card" style="background-color: rgb(73, 66, 66);margin-bottom: 70px;">
     <div class="googlemap">
@@ -174,12 +175,15 @@
        <tr><td ><i class="fa fa-envelope fa-lg" ></i><span  class="hovertext" >emailidgmail.com</span></td></tr>
        <tr><td><span  class="hovertext" >Time from Mon - Sun
         10:00 am - 8:00 pm</span></td></tr>
-       <tr><td><span  class="hovertext" >Address
-        Just In Front Of Axis Bank, Sundarpur, Varanasi - 221005 (In Front Of Axis Bank)</span></td></tr>
-       
+       <tr>
+        <td>
+            <span class="hovertext" >Address Just In Front Of Axis Bank, Sundarpur, Varanasi - 221005 (In Front Of Axis Bank)</span>
+        </td>
+      </tr>
         </tbody>
       </table>
 </div>
+
 <!--<i class="fa fa-instagram fa-lg"></i><span  class="hovertext" > emailidgmail.com</span><i class="fa fa-whatsapp fa-lg"></i><i class="fa fa-facebook fa-lg"></i>-->
 <!-- <div class="card" style="width:90%;">
     <div class="card-body">
@@ -189,3 +193,4 @@
        <span>Itemone</span>
     </div>
 </div> -->
+<p>hiii</p>

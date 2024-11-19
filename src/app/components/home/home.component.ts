@@ -35,22 +35,39 @@ ngAfterViewInit() {
 	   }
 	items=[
 		{pageurl:"/first",
-		 name:"Package 1",
-		 specifications:["Eye Brow","Upperlip","Half body","Pedicure"],
+		 name:"Beauty Care Package 1",
+		 specifications: [
+			"Eyebrow shaping.",
+			"Upper lip grooming.",
+			"Half-body waxing.",
+			"Relaxing pedicure."
+		  ],
 		 imageurl:"assets/storeoption-3.jpg",
-		 href:"https://api.whatsapp.com/send?phone=918217860187&text=Hii%20i%20would%20like%20to%20book%20for%20first!"
+		 href:"https://api.whatsapp.com/send?phone=918217860187&text=I%20want%20to%20book%20Complete%20Beauty%20Package%201"
 		},
 		{pageurl:"/two",
-		  name:"Package 2",
-		  specifications:["EyeBrow","UpperLip","Fore Head","Whitening Facial"],
+		  name:"Beauty Care Package 2",
+		  specifications: [
+			"Eyebrow grooming.",
+			"Upper lip care.",
+			"Forehead waxing.",
+			"Whitening facial."
+		  ],
 		  imageurl:"assets/storeoption-3.jpg",
-		  href:"https://api.whatsapp.com/send?phone=918217860187&text=Hello%20two!"
+		  href:"https://api.whatsapp.com/send?phone=918217860187&text=I%20want%20to%20book%20Complete%20Beauty%20Package%202"
 		},
 		{pageurl:"/three",
-		  name:"Package 3",
-		  specifications:["Facial","Hair cut","Eye brow","UpperLip","Half hand Wax","Half leg Wax"],
+		  name:"Beauty Care Package 3",
+		  specifications: [
+			"Rejuvenating facial.",
+			"Stylish haircut.",
+			"Eyebrow shaping.",
+			"Upper lip care.",
+			"Half-hand waxing.",
+			"Half-leg waxing."
+		  ],
 		  imageurl:"assets/storeoption-4.jpg",
-		  href:"https://api.whatsapp.com/send?phone=918217860187&text=Hello%20three"
+		  href:"https://api.whatsapp.com/send?phone=918217860187&text=I%20want%20to%20book%20Complete%20Beauty%20Package%203"
 		}
 	  ]
   //images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);

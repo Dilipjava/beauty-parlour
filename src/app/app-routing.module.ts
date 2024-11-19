@@ -5,10 +5,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
-  {path: 'home',
+  {path: '',
   component: HomeComponent,
 },
-{path: '',
+{path: 'about',
   component: AboutComponent,
 },
 {
